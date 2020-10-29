@@ -1,13 +1,25 @@
 {{#partial "title"}}Wildlife Tracker{{/partial}}
 {{#partial "content"}}
 
+
     <div class="container">
-        <h5 class="text-center">Add Normal Sighting</h5>
+        <h5 class="text-center">Add Endangered Sighting</h5>
         <hr>
-        <form method="Post" action="/sightnormal">
+        <form method="Post" action="/sightendangered">
             <div class="form-group">
                 <label for="name">AnimalName</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Animal Name">
+            </div>
+            <div class="form-group">
+                <label for="age">Animal Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Animal Age">
+            </div>
+            <div class="form-group">
+                <label for="health">Animal Health</label>
+                <select class="form-control" id="health" name="health">
+                    <option value="Healthy">Healthy</option>
+                    <option value="Sick">Sick</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="ranger">Ranger</label>
@@ -32,6 +44,11 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+
+
+
+
 
 {{/partial}}
 

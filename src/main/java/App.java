@@ -85,7 +85,7 @@ public class App {
             model.put("endangered",true);
             model.put("rangers", rangerDAO.getAllRangers());
             model.put("locations", locationDAO.getAllLocations());
-            return new ModelAndView(model,"sighting-form.hbs");
+            return new ModelAndView(model,"sightingendangered-form.hbs");
         }, new HandlebarsTemplateEngine());
 
         post("/sightnormal",(req, res)->{
