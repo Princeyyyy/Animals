@@ -19,6 +19,7 @@ public class Sql2oSightingEndangeredDAO implements SightingEndangeredDAO{
         String sql = "SELECT * FROM sightings WHERE type ='Endangered'";
         try(Connection con = sql2o.open()){
             return con.createQuery(sql)
+                    .throwOnMappingFailure(false)
                     .executeAndFetch(SightingEndangered.class);
         }catch(Sql2oException ex){
             System.out.println(ex);
@@ -28,10 +29,11 @@ public class Sql2oSightingEndangeredDAO implements SightingEndangeredDAO{
 
     @Override
     public void addEndangered(SightingEndangered sightingEndangered) {
-        String sql = "INSERT INTO sightings (animalName, animalAge, animalHealth, rangerId, type, locationId) values (:animalName, :animalAge, :animalHealth, :rangerId, :type, :locationId)";
+        String sql = "INSERT INTO sightings (animalName, animalAge, animalHealth, rangerId, type, locationId, dateSighted) values (:animalName, :animalAge, :animalHealth, :rangerId, :type, :locationId, now())";
         try(Connection con = sql2o.open()){
             int id = (int) con.createQuery(sql,true)
                     .bind(sightingEndangered)
+                    .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
             sightingEndangered.setId(id);        }

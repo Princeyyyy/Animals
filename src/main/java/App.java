@@ -28,6 +28,8 @@ public class App {
 
         Map<String, Object> model = new HashMap<>();
 
+        staticFileLocation("/public");
+
 
 
 
