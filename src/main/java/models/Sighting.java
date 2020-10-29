@@ -10,7 +10,7 @@ public class Sighting {
     private int rangerId;
     private int locationId;
     private String type;
-    private Timestamp createdAt;
+    private Timestamp dateSighted;
     private static final String TYPE ="Non-Endangered";
 
     public String getType() {
@@ -23,14 +23,14 @@ public class Sighting {
         this.type = type;
     }
 
-    public Timestamp getCreatedAt() {
+    public Timestamp getDateSighted() {
 
-        return createdAt;
+        return dateSighted;
     }
 
-    public void setCreatedAt(Timestamp dateSighted) {
+    public void setDateSighted(Timestamp dateSighted) {
 
-        this.createdAt = createdAt;
+        this.dateSighted = dateSighted;
     }
 
 
