@@ -1,84 +1,90 @@
 {{#partial "title"}}Wildlife Tracker{{/partial}}
 {{#partial "content"}}
 
-        <h3>Endangered Sightings</h3>
-        <table class="table table-dark">
-            <thead>
-            <tr>
-                <th scope="col">Type</th>
+    <div class="page">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Endangered Sightings:</h3>
+                <table class="table table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type</th>
 
-                <th scope="col">Name</th>
+                        <th scope="col">Name</th>
 
-                <th scope="col">Age</th>
+                        <th scope="col">Age</th>
 
-                <th scope="col">Health</th>
+                        <th scope="col">Health</th>
 
-                <th scope="col">Location</th>
+                        <th scope="col">Location</th>
 
-                <th scope="col">Ranger</th>
+                        <th scope="col">Ranger</th>
 
-                <th scope="col">Date</th>
-            </tr>
-            </thead>
+                        <th scope="col">Date Sighted</th>
+                    </tr>
+                    </thead>
 
-            <tbody>
-            {{#each endangeredSightings}}
-                <tr>
-                    <td>{{type}}</td>
+                    <tbody>
+                    {{#each endangeredSightings}}
+                        <tr>
+                            <td>{{type}}</td>
 
-                    <td>{{animalName}}</td>
+                            <td>{{animalName}}</td>
 
-                    <td>{{animalAge}}</td>
+                            <td>{{animalAge}}</td>
 
-                    <td>{{animalHealth}}</td>
+                            <td>{{animalHealth}}</td>
 
-                    <td>{{locationId}}</td>
+                            <td>{{locationId}}</td>
 
-                    <td>{{rangerId}}</td>
+                            <td>{{rangerId}}</td>
 
-                    <td>{{dateSighted}}</td>
-                </tr>
-            {{/each}}
-            </tbody>
-        </table>
+                            <td>{{dateSighted}}</td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
 
+            <div class="col-sm-6">
+                <h3>Non-Endangered Sightings:</h3>
+                <table class="table table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">Type</th>
 
+                        <th scope="col">Name</th>
 
+                        <th scope="col">Location</th>
 
-        <h3>Non-Endangered Sightings</h3>
-        <table class="table table-dark">
-            <thead>
-            <tr>
-                <th scope="col">Type</th>
+                        <th scope="col">Ranger</th>
 
-                <th scope="col">Name</th>
+                        <th scope="col">Date Sighted</th>
+                    </tr>
+                    </thead>
 
-                <th scope="col">Location</th>
+                    <tbody>
+                    {{#each normalSightings}}
 
-                <th scope="col">Ranger</th>
+                        <tr>
+                            <td>{{type}}</td>
 
-                <th scope="col">Date Sighted</th>
-            </tr>
-            </thead>
+                            <td>{{animalName}}</td>
 
-            <tbody>
-            {{#each normalSightings}}
+                            <td>{{locationId}}</td>
 
-                <tr>
-                    <td>{{type}}</td>
+                            <td>{{rangerId}}</td>
 
-                    <td>{{animalName}}</td>
+                            <td>{{dateSighted}}</td>
 
-                    <td>{{locationId}}</td>
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-                    <td>{{rangerId}}</td>
-
-                    <td>{{dateSighted}}</td>
-
-                </tr>
-            {{/each}}
-            </tbody>
-        </table>
+    </div>
 
 {{/partial}}
 {{> base.hbs}}

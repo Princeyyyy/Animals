@@ -1,24 +1,26 @@
 {{#partial "title"}}Wildlife Tracker{{/partial}}
 {{#partial "content"}}
-    <div class="container">
-        <h5 class="text-center">Add Ranger</h5>
-        <hr>
-        <form method="Post" action="/addranger">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
-            </div>
-            <div class="form-group">
-                <label for="badge">Badge</label>
-                <input type="number" class="form-control" id="badge" name="badge" placeholder="Badge">
-            </div>
-            <div class="form-group">
-                <label for="contact">Contact</label>
-                <input type="tel" class="form-control" id="contact" name="contact" placeholder="Contact">
-            </div>
+    <div class="rangerform">
+        <div class="container">
+            <h5 class="text-center">Add Ranger</h5>
+            <hr>
+            <form method="Post" action="/addranger">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="badge">Badge</label>
+                    <input type="number" class="form-control" id="badge" name="badge" placeholder="Badge">
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact</label>
+                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="Contact">
+                </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
 {{/partial}}
 

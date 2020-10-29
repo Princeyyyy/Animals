@@ -36,6 +36,12 @@ public class App {
         get("/",(req, res)->{
             model.put("endangeredSightings", sightingEndangeredDAO.getAllEndangered());
             model.put("normalSightings", sightingDAO.getNormal());
+            return new ModelAndView(model,"welcome.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/allsightings",(req, res)->{
+            model.put("endangeredSightings", sightingEndangeredDAO.getAllEndangered());
+            model.put("normalSightings", sightingDAO.getNormal());
             return new ModelAndView(model,"index.hbs");
         }, new HandlebarsTemplateEngine());
 

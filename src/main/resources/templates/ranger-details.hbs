@@ -1,18 +1,25 @@
 {{#partial "title"}}Wildlife Tracker{{/partial}}
 {{#partial "content"}}
 
-    <h2>Ranger Details:</h2>
-
-    <h2>Name: {{ranger.name}}</h2>
-
-    <h2>Badge Number: {{ranger.badgeNo}}</h2>
-
-    <h2>Contact Number: {{ranger.contact}}</h2>
+    <div class="ranger-detail">
+        <div class="text-center">
+            <h2><u>{{ranger.name}}</u></h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Badge Number:</h5>
+                    <p><em> {{ranger.badgeNo}} </em></p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contact:</h5>
+                    <p><em> {{ranger.contact}} </em></p>
+                </div>
+        </div>
+    </div>
 
 
     {{#if endangeredSightings}}
 
-        <h3>Endangered Sightings</h3>
+        <h3>Endangered Sightings:</h3>
         <table class="table table-dark">
             <thead>
             <tr>
@@ -59,7 +66,7 @@
 
     {{#if normalSightings}}
 
-        <h3>Non-Endangered Sightings</h3>
+        <h3>Non-Endangered Sightings:</h3>
         <table class="table table-dark">
             <thead>
             <tr>
@@ -97,12 +104,32 @@
         </table>
     {{/if}}
 
-
-
-
-
-
-
-
 {{/partial}}
 {{> base.hbs}}
+
+<!--<div class="hero-pg">-->
+<!--    <div class="text-center">-->
+<!--        <h2><u>{{ranger.name}}</u></h2>-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-4">-->
+<!--                <h5>Age:</h5>-->
+<!--                <p><em> {{ranger.badgeNo}} </em></p>-->
+<!--            </div>-->
+<!--            <div class="col-md-4">-->
+<!--                <h5>Strength:</h5>-->
+<!--                <p><em> {{ranger.contact}} </em></p>-->
+<!--            </div>-->
+<!--            <div class="col-md-4">-->
+<!--                <h5>Weakness:</h5>-->
+<!--                <p><em> {{hero.heroWeakness}} </em></p>-->
+<!--            </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<h2>Ranger Details:</h2>-->
+
+<!--<h2>Name: {{ranger.name}}</h2>-->
+
+<!--<h2>Badge Number: {{ranger.badgeNo}}</h2>-->
+
+<!--<h2>Contact Number: {{ranger.contact}}</h2>-->
