@@ -17,15 +17,19 @@ import java.util.Map;
 
 
 public class App {
+
     public static void main(String[] args) {
         String connectionString = "jdbc:postgresql://localhost:5432/wildlife";
-        Sql2o sql2o = new Sql2o(connectionString, "prince", "prince12");
+        Sql2o sql2o = new Sql2o(connectionString,"prince","prince12");
         Sql2oLocationDAO locationDAO = new Sql2oLocationDAO(sql2o);
         Sql2oRangerDAO rangerDAO = new Sql2oRangerDAO(sql2o);
         Sql2oSightingEndangeredDAO sightingEndangeredDAO = new Sql2oSightingEndangeredDAO(sql2o);
         Sql2oSightingDAO sightingDAO = new Sql2oSightingDAO(sql2o);
 
         Map<String, Object> model = new HashMap<>();
+
+
+
 
         get("/",(req, res)->{
             model.put("endangeredSightings", sightingEndangeredDAO.getAllEndangered());
@@ -40,7 +44,7 @@ public class App {
 
         get("/locations",(req, res)->{
             model.put("locations",locationDAO.getAllLocations());
-            return new ModelAndView(model,"location.hbs");
+            return new ModelAndView(model,"locations.hbs");
         }, new HandlebarsTemplateEngine());
 
         get("/addranger",(req, res)->{
@@ -113,5 +117,7 @@ public class App {
             model.put("normalSightings", rangerDAO.getSightingsByRangerId(id));
             return new ModelAndView(model,"ranger-details.hbs");
         }, new HandlebarsTemplateEngine());
+
+
     }
 }

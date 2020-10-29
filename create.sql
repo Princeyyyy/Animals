@@ -10,7 +10,7 @@ CREATE TABLE sightings(
     rangerId INTEGER,
     type VARCHAR,
     locationId INTEGER,
-    createdAt TIMESTAMP
+    dateSighted TIMESTAMP
 );
 
 CREATE TABLE rangers(
@@ -24,4 +24,3 @@ CREATE TABLE locations(
     id SERIAL PRIMARY KEY,
     name VARCHAR
 );
-
