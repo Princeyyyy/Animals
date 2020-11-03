@@ -5,6 +5,13 @@ This application is an evacuation application used by rangers to record animals 
 
 * **Prince Mumo** 
 
+##
+**Deployed Website**
+
+Below is the link to the deployed website on Heroku:
+
+https://wildlife-tracker2020.herokuapp.com/
+
 ## Getting Started
 
 Clone this repository to your local machine to get Started
