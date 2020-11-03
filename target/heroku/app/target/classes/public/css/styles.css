@@ -1,0 +1,79 @@
+.title-pg{
+text-align: center;
+background-image: url('../image/leopard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Alata', sans-serif;
+    color: white;
+}
+.title {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.page{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+h3{
+color: white;
+}
+.ranger-detail{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.location{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.endangeredform{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.sightingform{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.rangers{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.locationform{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+.rangerform{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+color: white;
+}
+.ranger-detail{
+background-image: url('../image/black.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+
+}

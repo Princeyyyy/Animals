@@ -17,10 +17,19 @@ import java.util.Map;
 
 
 public class App {
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
 
     public static void main(String[] args) {
-        String connectionString = "jdbc:postgresql://localhost:5432/wildlife";
-        Sql2o sql2o = new Sql2o(connectionString,"prince","prince12");
+//        String connectionString = "jdbc:postgresql://localhost:5432/wildlife";
+//        Sql2o sql2o = new Sql2o(connectionString,"prince","prince12");
+        String connectionString = "jdbc:postgresql://ec2-34-237-236-32.compute-1.amazonaws.com"; //!
+        Sql2o sql2o = new Sql2o(connectionString, "oribzfuityeewa", "2ad743b5f272aa5e0e36b834b27b31562b0526de9d4339454c435bf8054f0f92"); //!
         Sql2oLocationDAO locationDAO = new Sql2oLocationDAO(sql2o);
         Sql2oRangerDAO rangerDAO = new Sql2oRangerDAO(sql2o);
         Sql2oSightingEndangeredDAO sightingEndangeredDAO = new Sql2oSightingEndangeredDAO(sql2o);
@@ -28,6 +37,7 @@ public class App {
 
         Map<String, Object> model = new HashMap<>();
 
+        port(getHerokuAssignedPort());
         staticFileLocation("/public");
 
 

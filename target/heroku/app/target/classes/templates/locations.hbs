@@ -1,0 +1,33 @@
+{{#partial "title"}}Wildlife Tracker{{/partial}}
+{{#partial "content"}}
+    <div class="location">
+        {{#if locations}}
+
+            <h3>Location Sightings:</h3>
+            <table class="table table-dark">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                {{#each locations}}
+                    <tr>
+                        <td>{{name}}</td>
+
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        {{/if}}
+    </div>
+
+
+
+
+
+
+
+{{/partial}}
+{{> base.hbs}}

@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,22 +103,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="663" y="355" width="583" height="403" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1604429750168" />
-    <state width="1874" height="268" key="GridCell.Tab.0.bottom" timestamp="1604429743776">
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom" timestamp="1604430286791">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="268" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1604429743776" />
-    <state width="1874" height="268" key="GridCell.Tab.0.center" timestamp="1604429743776">
+    <state width="1874" height="268" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1604430286791" />
+    <state width="1874" height="268" key="GridCell.Tab.0.center" timestamp="1604430286791">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="268" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1604429743776" />
-    <state width="1874" height="268" key="GridCell.Tab.0.left" timestamp="1604429743775">
+    <state width="1874" height="268" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1604430286791" />
+    <state width="1874" height="268" key="GridCell.Tab.0.left" timestamp="1604430286790">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="268" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1604429743775" />
-    <state width="1874" height="268" key="GridCell.Tab.0.right" timestamp="1604429743776">
+    <state width="1874" height="268" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1604430286790" />
+    <state width="1874" height="268" key="GridCell.Tab.0.right" timestamp="1604430286791">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="268" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1604429743776" />
+    <state width="1874" height="268" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1604430286791" />
     <state x="543" y="290" width="824" height="533" key="IDE.errors.dialog" timestamp="1604427965025">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

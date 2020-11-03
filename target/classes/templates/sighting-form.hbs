@@ -1,0 +1,40 @@
+{{#partial "title"}}Wildlife Tracker{{/partial}}
+{{#partial "content"}}
+
+    <div class="sightingform">
+        <div class="container">
+            <h5 class="text-center">Add Normal Sighting</h5>
+            <hr>
+            <form method="Post" action="/sightnormal">
+                <div class="form-group">
+                    <label for="name">Animal Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Animal Name">
+                </div>
+                <div class="form-group">
+                    <label for="ranger">Ranger</label>
+                    <select class="form-control" id="ranger" name="ranger">
+                        {{#if rangers}}
+                            {{#each rangers}}
+                                <option value="{{id}}">{{name}}</option>
+                            {{/each}}
+                        {{/if}}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <select class="form-control" id="location" name="location">
+                        {{#if locations}}
+                            {{#each locations}}
+                                <option value="{{id}}">{{name}}</option>
+                            {{/each}}
+                        {{/if}}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{{/partial}}
+
+{{> base.hbs}}
