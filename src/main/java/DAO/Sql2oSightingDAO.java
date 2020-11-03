@@ -8,7 +8,7 @@ import org.sql2o.Sql2oException;
 
 import java.util.List;
 
-public class Sql2oSightingDAO implements SightingDAO{
+public class Sql2oSightingDAO implements SightingDAO {
 
     private final Sql2o sql2o;
 
@@ -19,11 +19,11 @@ public class Sql2oSightingDAO implements SightingDAO{
     @Override
     public List<Sighting> getNormal() {
         String sql = "SELECT * FROM sightings WHERE type ='Non-Endangered'";
-        try(Connection con = sql2o.open()){
+        try (Connection con = sql2o.open()) {
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)
                     .executeAndFetch(Sighting.class);
-        }catch(Sql2oException ex){
+        } catch (Sql2oException ex) {
             System.out.println(ex);
             return null;
         }
@@ -32,14 +32,14 @@ public class Sql2oSightingDAO implements SightingDAO{
     @Override
     public void addNormal(Sighting sighting) {
         String sql = "INSERT INTO sightings (animalName, rangerId, type, locationId, dateSighted) values (:animalName, :rangerId, :type, :locationId, now())";
-        try(Connection con = sql2o.open()){
-            int id = (int) con.createQuery(sql,true)
+        try (Connection con = sql2o.open()) {
+            int id = (int) con.createQuery(sql, true)
                     .bind(sighting)
                     .throwOnMappingFailure(false)
                     .executeUpdate()
                     .getKey();
-            sighting.setId(id);        }
-        catch (Sql2oException ex){
+            sighting.setId(id);
+        } catch (Sql2oException ex) {
             System.out.println(ex);
         }
     }
